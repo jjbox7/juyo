@@ -1,0 +1,13 @@
+#container {
+    font-size: 10px;
+  }
+  
+  #navigation-title {
+    color: red;
+  }
+  
+  .selected {
+    font-weight: bold;
+    color: #009999;
+    text-decoration: underline;
+  }

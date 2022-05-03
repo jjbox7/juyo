@@ -1,4 +1,4 @@
-.input {
+/* .input {
     display: block;
     width: 200px;
     height: 30px;
@@ -44,4 +44,19 @@
   
   body {
     margin: 30px;
+  } */
+
+
+  #container {
+    font-size: 10px;
+  }
+  
+  #navigation-title {
+    color: red;
+  }
+  
+  .selected {
+    font-weight: bold;
+    color: #009999;
+    text-decoration: underline;
   }
