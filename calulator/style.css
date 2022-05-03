@@ -1,0 +1,170 @@
+/* global */
+
+/*Keyframes*/ 
+@keyframes rain_effect { 0% {background-position: 0px 0px, 0px 0px, 0px 0px;} 50%
+    {background-position: 400px 800px, 300px 300px, 200px 200px; background-color: #FFF002} 100%
+    {background-position: 0px 0px, 0px 0px, 0px 0px; background-color: #F15D21} } 
+@-moz-keyframes rain_effect { 0% {background-position: 0px 0px, 0px 0px, 0px 0px;} 50%
+    {background-position: 400px 800px, 300px 300px, 200px 200px; background-color: #FFF002} 100%
+    {background-position: 0px 0px, 0px 0px, 0px 0px; background-color: #F15D21} } 
+@-webkit-keyframes rain_effect { 0% {background-position: 0px 0px, 0px 0px, 0px 0px;} 50%
+    {background-position: 400px 800px, 300px 300px, 200px 200px; background-color: #FFF002} 100%
+    {background-position: 0px 0px, 0px 0px, 0px 0px; background-color: #F15D21} } 
+@-ms-keyframes rain_effect { 0% {background-position: 0px 0px, 0px 0px, 0px 0px;} 50%
+    {background-position: 400px 800px, 300px 300px, 200px 200px; background-color: #FFF002} 100%
+    {background-position: 0px 0px, 0px 0px, 0px 0px; background-color: #F15D21} }
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0px;
+    box-sizing: border-box;
+    font-family: "Lobster", cursive;
+    color: rgb(254, 254, 254);
+  }
+  
+  body { background-color: #F8C8DC;
+    background-image: url('./img/114124.png'), url('./img/23.png'), url('./img/3432.png'),url('./img/Untitled-1.png');
+    animation: rain_effect 40s linear infinite;
+    -webkit-animation: rain_effect 40s linear infinite;
+    -moz-animation: rain_effect 40s linear infinite;
+    -ms-animation: rain_effect 40s linear infinite; }
+  
+  /*
+    Calculator styles
+  */
+  
+  .container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .calculator {
+    background-color: #ffe206;
+    width: 350px;
+    height: 500px;
+    border-radius: 15px;
+    padding: 30px 20px;
+  }
+  
+  .calculator__display--bare {
+    /* display: none; */
+    background-color: #ffffff;
+    text-align: center;
+    vertical-align: middle;
+    height: 100px;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 25px 15px;
+    overflow: hidden;
+    overflow-wrap: break-word;
+  }
+  
+  .calculator__display--bare > span {
+    display: inline-block;
+    text-align: center;
+    background-color: #FE8F8F;
+    margin: 5px;
+    width: 40px;
+    height: 45px;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 10px 5px;
+  }
+  
+  .calculator__display--for-advanced {
+    display: none;
+    background-color: #ffffff;
+    height: 100px;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 20px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 25px 15px;
+    overflow: hidden;
+    overflow-wrap: break-word;
+  }
+  
+  .calculator__buttons {
+    background-color: #ffffff;
+    width: 100%;
+    height: 330px;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .clear__and__enter {
+    height: 50px;
+    margin: 10px;
+    background-color: #f3f0fc;
+  }
+  
+  .clear__and__enter > button {
+    border-radius: 10px;
+    width: 50px;
+    height: 40px;
+    margin: 0px 5px;
+    background-color: #FE8F8F;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .button__row {
+    height: 50px;
+    margin: 10px;
+    background-color: #f3f0fc;
+  }
+  
+  .button__row > button {
+    width: 50px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+    background-color: #9e4f00db;
+  }
+  
+  .button__row > .operator {
+    color: #ffffff;
+    background-color: #313132;
+  }
+  
+  .button__row > .double {
+    width: 115px;
+  }
+  
+  .button__row > .isPressed {
+    background-color: #9e4f00db;
+  }
+  
+  .sponge_logo {
+      position: fixed;
+      padding: 30px;
+      left: 550px;
+      top: 150px;
+      max-width: 25%;
+      max-height: 25%;
+      transform: rotate(30);
+    }
+
+  .logo {
+    position: fixed;
+    padding: 30px;
+    bottom: 0px;
+    right: 700px;
+  }
+  
+  .sponge {
+      position: fixed;
+      padding: 50px;
+      bottom: 0px;
+      left: 600px;
+      max-width: 40%;
+      max-height: 40%;
+  }
+
