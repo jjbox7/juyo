@@ -1,18 +1,22 @@
 /* global */
 
 /*Keyframes*/ 
-@keyframes rain_effect { 0% {background-position: 0px 0px, 0px 0px, 0px 0px;} 50%
-    {background-position: 400px 800px, 300px 300px, 200px 200px; background-color: #FFF002} 100%
-    {background-position: 0px 0px, 0px 0px, 0px 0px; background-color: #F15D21} } 
-@-moz-keyframes rain_effect { 0% {background-position: 0px 0px, 0px 0px, 0px 0px;} 50%
-    {background-position: 400px 800px, 300px 300px, 200px 200px; background-color: #FFF002} 100%
-    {background-position: 0px 0px, 0px 0px, 0px 0px; background-color: #F15D21} } 
-@-webkit-keyframes rain_effect { 0% {background-position: 0px 0px, 0px 0px, 0px 0px;} 50%
-    {background-position: 400px 800px, 300px 300px, 200px 200px; background-color: #FFF002} 100%
-    {background-position: 0px 0px, 0px 0px, 0px 0px; background-color: #F15D21} } 
-@-ms-keyframes rain_effect { 0% {background-position: 0px 0px, 0px 0px, 0px 0px;} 50%
-    {background-position: 400px 800px, 300px 300px, 200px 200px; background-color: #FFF002} 100%
-    {background-position: 0px 0px, 0px 0px, 0px 0px; background-color: #F15D21} }
+@keyframes rain_effect {
+    0% {background-position: 0px 0px, 0px 0px, 0px 0px;} 
+    50% {background-position: 400px 800px, 300px 300px, 200px 200px; background-color: #FFF002} 
+    100% {background-position: 0px 0px, 0px 0px, 0px 0px; background-color: #F15D21} } 
+@-moz-keyframes rain_effect {
+    0% {background-position: 0px 0px, 0px 0px, 0px 0px;} 
+    50% {background-position: 400px 800px, 300px 300px, 200px 200px; background-color: #FFF002} 
+    100% {background-position: 0px 0px, 0px 0px, 0px 0px; background-color: #F15D21} } 
+@-webkit-keyframes rain_effect {
+    0% {background-position: 0px 0px, 0px 0px, 0px 0px;} 
+    50% {background-position: 400px 800px, 300px 300px, 200px 200px; background-color: #FFF002} 
+    100% {background-position: 0px 0px, 0px 0px, 0px 0px; background-color: #F15D21} } 
+@-ms-keyframes rain_effect {
+    0% {background-position: 0px 0px, 0px 0px, 0px 0px;} 
+    50% {background-position: 400px 800px, 300px 300px, 200px 200px; background-color: #FFF002} 
+    100% {background-position: 0px 0px, 0px 0px, 0px 0px; background-color: #F15D21} }
 
 * {
     margin: 0;
@@ -22,13 +26,13 @@
     font-family: "Lobster", cursive;
     color: rgb(254, 254, 254);
   }
-  
+  /* animation */
   body { background-color: #F8C8DC;
     background-image: url('./img/114124.png'), url('./img/23.png'), url('./img/3432.png'),url('./img/Untitled-1.png');
-    animation: rain_effect 40s linear infinite;
+    animation: rain_effect 20s linear infinite;
     -webkit-animation: rain_effect 40s linear infinite;
-    -moz-animation: rain_effect 40s linear infinite;
-    -ms-animation: rain_effect 40s linear infinite; }
+    -moz-animation: rain_effect 30s linear infinite;
+    -ms-animation: rain_effect 20s linear infinite; }
   
   /*
     Calculator styles
@@ -43,7 +47,7 @@
   }
   .calculator {
     background-color: #ffe206;
-    width: 350px;
+    width: 800px;
     height: 500px;
     border-radius: 15px;
     padding: 30px 20px;
@@ -56,7 +60,7 @@
     text-align: center;
     vertical-align: middle;
     height: 100px;
-    width: 100%;
+    width: 40%;
     border-radius: 10px;
     font-size: 20px;
     padding: 25px 15px;
@@ -94,7 +98,7 @@
   
   .calculator__buttons {
     background-color: #ffffff;
-    width: 100%;
+    width: 40%;
     height: 330px;
     margin-top: 10px;
     padding: 10px;
@@ -181,7 +185,7 @@
     position: fixed;
     padding: 50px;
     bottom: 0px;
-    left: 500px;
+    left: 290px;
     max-width: 40%;
     max-height: 40%;
   }
@@ -192,9 +196,9 @@
     position: fixed;
     padding: auto;
     left: 550px;
-    top: 0px;
-    max-width: 25%;
-    max-height: 25%;
+    top: 30px;
+    max-width: 20%;
+    max-height: 20%;
     transform: rotate(30);
     }
 
