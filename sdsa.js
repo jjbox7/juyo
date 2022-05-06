@@ -1,1 +1,2 @@
-const asds=7
+const daysInWeek=7;
+const maxNumber =5;
