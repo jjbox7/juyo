@@ -157,13 +157,45 @@
   //     answer *= base
   //   }
   //   return answer
-  // }
+  // // }
   
-  function characterAndNumber(word) {
-    // TODO: 여기에 코드를 작성합니다. 
-    let answer = ""
-    for (let i = 0; i < word.length;  i++){
-      answer = answer + word[i] + i
-    }
-    return answer
+  // function characterAndNumber(word) {
+  //   // TODO: 여기에 코드를 작성합니다. 
+  //   let answer = ""
+  //   for (let i = 0; i < word.length;  i++){
+  //     answer = answer + word[i] + i
+  //   }
+  //   return answer
+  // }
+  function getAllElementsButNth(arr, n) {
+    // TODO: 여기에 코드를 작성합니다.
+    arr.splice(n, 1)
+    return arr
   }
+  
+  function createPhoneNumber(arr) {
+    // TODO: 여기에 코드를 작성합니다.
+    let head = '(010)';
+    const len = arr.length;
+    const body = arr.slice(len - 8, len - 4).join('');
+    const tail = arr.slice(len - 4, len).join('');
+  
+    if (len === 11) {
+      head = `(${arr.slice(0, 3).join('')})`;
+    }
+    function fibonacci(num) {
+      let fibNum = [];
+    
+      for (let i = 0; i <= num; i++) {
+        if (i === 0) {
+          fibNum.push(0);
+        } else if (i === 1) {
+          fibNum.push(1);
+        } else {
+          fibNum.push(fibNum[i - 2] + fibNum[i - 1]);
+        }
+      }
+    
+      return fibNum;
+    }
+    
