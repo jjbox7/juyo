@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<skin>
+    <information>
+        <name>D-DL Survey Skin</name>
+        <!-- 스킨의 이름 -->
+        <version>1.00</version>
+        <!-- 스킨의 버전 -->
+        <description>
+            <!-- 스킨의 상세 설명 -->
+            <![CDATA[ 설문지 같은 느낌의 깔끔한 스킨. ]]>
+        </description>
+        <license>
+            <!-- 스킨의 라이센스 -->
+            <![CDATA[ copyright를 제외하고 자유로운 수정이 가능합니다. 단, 재배포는 불가합니다. 질문은 스킨 배포 페이지를 통해 해주세요. ]]>
+        </license>
+    </information>
+    <author>
+        <name>ㅓㅇ</name>
+        <!-- 스킨 제작자 이름 -->
+        <homepage>https://d-dl.tistory.com</homepage>
+        <!-- 스킨 제작자 홈페이지 -->
+        <email>d.dlzndi@gmail.com</email>
+        <!-- 스킨 제작자 이메일 주소 -->
+    </author>
+    <default>
+        <recentEntries>5</recentEntries>
+        <!-- 사이드바의 최근글 표시 갯수 -->
+        <recentComments>5</recentComments>
+        <!-- 사이드바의 최근 댓글 표시 갯수 -->
+        <recentTrackbacks>5</recentTrackbacks>
+        <!-- 사이드바의 최근 트랙백 표시 갯수 -->
+        <itemsOnGuestbook>10</itemsOnGuestbook>
+        <!-- 한페이지에 표시될 방명록 갯수 -->
+        <tagsInCloud>30</tagsInCloud>
+        <!-- 사이드바에 표시될 태그 갯수 -->
+        <sortInCloud>3</sortInCloud>
+        <!-- 태그 클라우드 표현 방식 (1:인기도순, 2:이름순, 3:랜덤) -->
+        <expandComment>0</expandComment>
+        <!-- 댓글영역 표현 방식 (0:감추기, 1:펼치기) -->
+        <expandTrackback>0</expandTrackback>
+        <!-- 트랙백영역 표현 방식 (0:감추기, 1:펼치기) -->
+        <lengthOfRecentNotice>25</lengthOfRecentNotice>
+        <!-- 최근 공지 표현될 글자수 -->
+        <lengthOfRecentEntry>27</lengthOfRecentEntry>
+        <!-- 최근 글 표현될 글자수 -->
+        <lengthOfRecentComment>30</lengthOfRecentComment>
+        <!-- 최근 댓글에 표현될 글자수 -->
+        <lengthOfRecentTrackback>30</lengthOfRecentTrackback>
+        <!-- 최근 트랙백에 표현될 글자수 -->
+        <lengthOfLink>30</lengthOfLink>
+        <!-- 링크에 표현될 글자수 -->
+        <showListOnArchive>2</showListOnArchive>
+        <!-- 홈에서 목록 표현(0:내용만, 1:목록만, 2: 내용+목록) -->
+        <showListOnCategory>2</showListOnCategory>
+        <!-- 기본 글 목록 표현(0:내용만, 1:목록만, 2: 내용+목록) -->
+        <commentMessage>
+            <none>댓글이 없습니다.</none>
+            <!-- 댓글이 하나도 없을때 -->
+            <single>댓글 &lt;span class="cnt"&gt;하나&lt;/span&gt; 달렸습니다.</single>
+            <!-- 댓글이 하나 있을때 -->
+        </commentMessage>
+        <trackbackMessage>
+            <none>받은 트랙백이 없고</none>
+            <!-- 트랙백 표현 방법 -->
+            <single>트랙백이 &lt;span class="cnt"&gt;하나&lt;/span&gt;이고</single>
+            <!-- 트랙백이 하나도 없을때 -->
+        </trackbackMessage>
+        <tree>
+            <color>000000</color>
+            <!-- 댓글이 하나 있을때 -->
+            <bgColor>ffffff</bgColor>
+            <!-- 카테고리 배경색 -->
+            <activeColor>000000</activeColor>
+            <!-- 선택시 글자색 -->
+            <activeBgColor>eeeeee</activeBgColor>
+            <!-- 선택시 배경색 -->
+            <labelLength>27</labelLength>
+            <!-- 표현될 카테고리 글자 수 -->
+            <showValue>1</showValue>
+            <!-- 카테고리 글 수 표현(0:숨김, 1:보임) -->
+        </tree>
+        <contentWidth>700</contentWidth>
+        <!-- 콘텐츠영역 가로 사이즈, 이 사이즈에 맞춰 에디터의 위지윅이 제대로 구현된다. -->
+        <liststyle>default</liststyle>
+        <cover>
+            <![CDATA[
+      [
+        {
+          "name": "gallery",
+          "title": "",
+          "dataType": "RECENT",
+          "data": {"category":"ALL","size":"12"}
+        },
+        {
+          "name": "default",
+          "title": "목록형",
+          "dataType": "RECENT",
+          "data": {"category":"ALL","size":"4"}
+        }, 
+        {
+          "name": "c-write",
+          "title": "카드글",
+          "dataType": "CUSTOM",
+          "data": [
+            {
+              "title":"카드글은 이런 느낌입니다.",
+              "summary":"커버 아이템-자유글 타입을 선택한 후, 콘텐츠-직접입력을 통해 \n티스토리 스킨 편집기 내부에서 홈 화면을 꾸밀 글을 작성할 수도 있어요.",
+              "url":"",
+              "thumbnail":""
+            },
+            {
+              "title":"URL은 이곳에 링크로 들어가고",
+              "summary":"이미지는 이렇게 좌측에 들어갑니다. \n\n이 안에선\n아주\n<b>놀</b>\n<i>랍</i>\n<del>게</del>\n<a href='#'>도</a>\n\n<span style='width: 1em;display:inline-block;line-height:1;position:relative;top:1em;margin:0 .5em;'>줄바꿈</span>과 <mark>코드</mark>도 사용할 수 있어요!",
+              "url":"https://www.tistory.com/",
+              "thumbnail":"https://blog.kakaocdn.net/dn/bHxhNG/btraWTiqXjp/l8uvMI17eE31Ng1owNAkik/img.jpg"
+            }
+          ]
+        }
+      ]
+      ]]>
+        </cover>
+    </default>
+    <liststyle>
+        <item>
+            <label>목록형</label>
+            <value>default</value>
+        </item>
+        <item>
+            <label>갤러리형</label>
+            <value>gallery</value>
+        </item>
+        <item>
+            <label>카드형</label>
+            <value>c-write</value>
+        </item>
+    </liststyle>
+    <cover>
+        <item>
+            <name>default</name>
+            <label>
+                <![CDATA[목록형]]>
+            </label>
+            <description>
+                <![CDATA[목록형으로 글 리스트를 표시합니다.]]>
+            </description>
+        </item>
+        <item>
+            <name>gallery</name>
+            <label>
+                <![CDATA[갤러리형]]>
+            </label>
+            <description>
+                <![CDATA[갤러리형으로 글 리스트를 표시합니다.]]>
+            </description>
+        </item>
+        <item>
+            <name>c-write</name>
+            <label>
+                <![CDATA[카드형]]>
+            </label>
+            <description>
+                <![CDATA[카드 형식으로 글 리스트를 표시합니다.]]>
+            </description>
+        </item>
+    </cover>
+    <variables>
+        <!--추가-->
+        <variablegroup name="테마 설정">
+            <variable>
+                <name>base-color</name>
+                <label>
+                    <![CDATA[ 배경색 ]]>
+                </label>
+                <type>COLOR</type>
+                <option />
+                <default>#FFEADB</default>
+                <description>
+                    <![CDATA[ 배경색을 설정합니다. ]]>
+                </description>
+            </variable>
+            <variable>
+                <name>color-color</name>
+                <label>
+                    <![CDATA[ 글자색 ]]>
+                </label>
+                <type>COLOR</type>
+                <option />
+                <default>#637373</default>
+                <description>
+                    <![CDATA[ 글자색을 설정합니다. ]]>
+                </description>
+            </variable>
+            <variable>
+                <name>point-color</name>
+                <label>
+                    <![CDATA[ 포인트색 ]]>
+                </label>
+                <type>COLOR</type>
+                <option />
+                <default>#FF9A76</default>
+                <description>
+                    <![CDATA[ 포인트색을 설정합니다. 배경색 위에서도, 글자색 위에서도 눈에 띄는 색을 추천합니다. ]]>
+                </description>
+            </variable>
+            <variable>
+                <name>right-sidebar-use</name>
+                <label>
+                    <![CDATA[ 우측 사이드바 사용 ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>false</default>
+            </variable>
+            <variable>
+                <name>sidebar-scroll</name>
+                <label>
+                    <![CDATA[ 사이드바 스크롤 사용 ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>true</default>
+            </variable>
+            <variable>
+                <name>right-m-btn-use</name>
+                <label>
+                    <![CDATA[ 모바일 버튼 우측으로 ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>false</default>
+            </variable>
+            <variable>
+                <name>right-m-side-use</name>
+                <label>
+                    <![CDATA[ 모바일 사이드바 우측으로 ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>false</default>
+            </variable>
+        </variablegroup>
+        <variablegroup name="프로필 설정">
+            <variable>
+                <name>profile-image</name>
+                <label>
+                    <![CDATA[ 프로필 사진 (공란 시 블로그 이미지 사용) ]]>
+                </label>
+                <type>IMAGE</type>
+                <option />
+                <default></default>
+            </variable>
+            <variable>
+                <name>show-blogger-name</name>
+                <label>
+                    <![CDATA[ 사이드바 블로그 이름 대신 이름 보여주기 ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>false</default>
+            </variable>
+        </variablegroup>
+        <variablegroup name="본문 설정">
+            <variable>
+                <name>all-max-width</name>
+                <label>
+                    <![CDATA[ 화면 최대 넓이 ]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default>1680px</default>
+            </variable>
+            <variable>
+                <name>content-max-width</name>
+                <label>
+                    <![CDATA[ 본문 최대 넓이 ]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default>1280px</default>
+            </variable>
+            <variable>
+                <name>side-width</name>
+                <label>
+                    <![CDATA[ 사이드바 기본 넓이 ]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default>300px</default>
+            </variable>
+            <variable>
+                <name>side-border</name>
+                <label>
+                    <![CDATA[ 사이드바 구분선 추가 ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>false</default>
+            </variable>
+            <variable>
+                <name>comment-open</name>
+                <label>
+                    <![CDATA[ 댓글창 열어두기 ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>true</default>
+            </variable>
+            <variable>
+                <name>comment-write</name>
+                <label>
+                    <![CDATA[ 댓글 작성란 손글씨 폰트 적용 ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>true</default>
+            </variable>
+            <variable>
+                <name>profile-move</name>
+                <label>
+                    <![CDATA[ 블로그 메뉴 사이드바로 옮기기 ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>true</default>
+            </variable>
+        </variablegroup>
+        <variablegroup name="갤러리 썸네일">
+            <variable>
+                <name>thumb-height</name>
+                <label>
+                    <![CDATA[ 이미지 없는 글의 텍스트 썸네일 높이 ]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default>10em</default>
+            </variable>
+            <variable>
+                <name>thumb-2-width</name>
+                <label>
+                    <![CDATA[ 이미지 2줄 보여줄 화면 너비 ]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default>1000px</default>
+            </variable>
+            <variable>
+                <name>thumb-1-width</name>
+                <label>
+                    <![CDATA[ 이미지 1줄 보여줄 화면 너비 ]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default>600px</default>
+            </variable>
+        </variablegroup>
+        <variablegroup name="부가 기능 설정">
+            <variable>
+                <name>use-indicator</name>
+                <label>
+                    <![CDATA[ 스크롤 인디케이터 ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>true</default>
+            </variable>
+            <variable>
+                <name>use-updown</name>
+                <label>
+                    <![CDATA[ 스크롤 탑/바텀 버튼 ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>true</default>
+            </variable>
+            <variable>
+                <name>use-loader</name>
+                <label>
+                    <![CDATA[ 로딩 이미지 ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>true</default>
+            </variable>
+            <variable>
+                <name>grayfilter-use</name>
+                <label>
+                    <![CDATA[ 이미지 흑백 필터 ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>true</default>
+            </variable>
+            <variable>
+                <name>grayfilter-white-use</name>
+                <label>
+                    <![CDATA[ 흑백 필터 사용 시 흰색 필터 적용 ]]>
+                </label>
+                <type>BOOL</type>
+                <option />
+                <default>false</default>
+            </variable>
+            <variable>
+                <name>type-effect-speed</name>
+                <label>
+                    <![CDATA[ 카테고리 설명 타이핑 이펙트 속도(숫자만 가능, 0=이펙트 없음) ]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default>80</default>
+            </variable>
+        </variablegroup>
+        <variablegroup name="SNS 설정">
+            <variable>
+                <name>github-id</name>
+                <label>
+                    <![CDATA[ 깃허브 아이디 ]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default>github</default>
+            </variable>
+            <variable>
+                <name>facebook-id</name>
+                <label>
+                    <![CDATA[ 페이스북 아이디 ]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default>facebook</default>
+            </variable>
+            <variable>
+                <name>instagram-id</name>
+                <label>
+                    <![CDATA[ 인스타그램 아이디 ]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default>instagram</default>
+            </variable>
+            <variable>
+                <name>twitter-id</name>
+                <label>
+                    <![CDATA[ 트위터 아이디 ]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default>twitter</default>
+            </variable>
+            <variable>
+                <name>twitter-w-id</name>
+                <label>
+                    <![CDATA[ 트위터 위젯 아이디 (공란 시 위 아이디 사용) ]]>
+                </label>
+                <type>STRING</type>
+                <option />
+                <default></default>
+            </variable>
+        </variablegroup>
+    </variables>
+</skin>
