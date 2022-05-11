@@ -253,5 +253,38 @@
     }
     return false
   }
+
+  function getAllButLastElementOfProperty(obj, key) {
+    // TODO: 여기에 코드를 작성합니다.
+    let result = [];
+    for (let prop in obj){
+      result[prop] = obj[prop];
+    }
+    if (Array.isArray(obj[key])){
+      return result[key].slice(0,result[key].length-1);
+    }else{
+      return [];
+    }
+  }
+
+  function getValueOfNthElement(arr, num) {
+    // TODO: 여기에 코드를 작성합니다.
+    if (arr.length === 0){
+      return 'no name'
+    }
+    if (arr.length <= num){
+      return arr[arr.length-1]['name']
+    } else if (arr[num]){
+      return arr[num]['name']
+    }
+  }
+  function countNumberOfKeys(obj) {
+    // TODO: 여기에 코드를 작성합니다.
+    let n = Object.keys(obj);
+    return n.length;
+  }
+  
+  
+  
   
   
