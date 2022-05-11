@@ -167,35 +167,91 @@
   //   }
   //   return answer
   // }
-  function getAllElementsButNth(arr, n) {
-    // TODO: 여기에 코드를 작성합니다.
-    arr.splice(n, 1)
-    return arr
+  // function getAllElementsButNth(arr, n) {
+  //   // TODO: 여기에 코드를 작성합니다.
+  //   arr.splice(n, 1)
+  //   return arr
+  // }
+  
+  // function createPhoneNumber(arr) {
+  //   // TODO: 여기에 코드를 작성합니다.
+  //   let head = '(010)';
+  //   const len = arr.length;
+  //   const body = arr.slice(len - 8, len - 4).join('');
+  //   const tail = arr.slice(len - 4, len).join('');
+  
+  //   if (len === 11) {
+  //     head = `(${arr.slice(0, 3).join('')})`;
+  //   }
+  //   function fibonacci(num) {
+  //     let fibNum = [];
+    
+  //     for (let i = 0; i <= num; i++) {
+  //       if (i === 0) {
+  //         fibNum.push(0);
+  //       } else if (i === 1) {
+  //         fibNum.push(1);
+  //       } else {
+  //         fibNum.push(fibNum[i - 2] + fibNum[i - 1]);
+  //       }
+  //     }
+    
+  //     return fibNum;
+  //   }
+    
+  function* fibonacci() { // 생성기 함수
+    let [prev, curr] = [1, 1];
+    while (true) {
+      [prev, curr] = [curr, prev + curr];
+      yield curr;
+    }
   }
   
-  function createPhoneNumber(arr) {
-    // TODO: 여기에 코드를 작성합니다.
-    let head = '(010)';
-    const len = arr.length;
-    const body = arr.slice(len - 8, len - 4).join('');
-    const tail = arr.slice(len - 4, len).join('');
+  for (let n of fibonacci()) {
+    console.log(n);
+    // 1000에서 수열을 자름
+    if (n >= 1000) {
+      break;
+    }
+  }
+  Object.prototype.objCustom = function () {};
+  Array.prototype.arrCustom = function () {};
   
-    if (len === 11) {
-      head = `(${arr.slice(0, 3).join('')})`;
-    }
-    function fibonacci(num) {
-      let fibNum = [];
-    
-      for (let i = 0; i <= num; i++) {
-        if (i === 0) {
-          fibNum.push(0);
-        } else if (i === 1) {
-          fibNum.push(1);
-        } else {
-          fibNum.push(fibNum[i - 2] + fibNum[i - 1]);
-        }
+  let iterable = [3, 5, 7];
+  iterable.foo = "hello";
+  
+  for (let i in iterable) {
+    console.log(i); // logs 0, 1, 2, "foo", "arrCustom", "objCustom"
+  }
+  
+  for (let i of iterable) {
+    console.log(i); // logs 3, 5, 7
+  }
+
+  function countAllCharacters(str) {
+    // TODO: 여기에 코드를 작성합니다.
+    let obj = [];
+    for (let i = 0; i < str.length; i++) {
+      let key =str[i];
+      if (key in obj){
+        obj[key] = obj[key] + 1;
+      } else if (!(key in obj)){
+        obj[key] = 1;
       }
-    
-      return fibNum;
     }
-    
+    return obj;
+  }
+
+  function addObjectProperty(obj1, property, obj2) {
+    // 여기에 코드를 작성합니다
+      obj1[property] = obj2;
+  }
+  function isPersonOldEnoughToVote(person) {
+    // TODO: 여기에 코드를 작성합니다.
+    if (person.age >=18 ){
+      return true;
+    }
+    return false
+  }
+  
+  
