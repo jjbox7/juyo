@@ -103,4 +103,3 @@ describe('구조 분해 할당(Destructing Assignment)에 관해서', () => {
     expect(changedDepartment).to.eql({name: '김코딩', company: {...user.company, department: 'Marketing'}, age: 35})
   })
 })
-let : FileSystemDirectoryEntry
