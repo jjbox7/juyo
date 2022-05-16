@@ -68,7 +68,7 @@ describe('Spread syntax에 대해 학습합니다.', function () {
 
     // arguments를 통해 '비슷하게' 함수의 전달인자들을 다룰 수 있습니다. (spread syntax 도입 이전)
     // arguments는 모든 함수의 실행 시 자동으로 생성되는 '객체'입니다.
-    function getAllParamsByArgumentsObj(...arguments) {
+    function getAllParamsByArgumentsObj(){
       return arguments;
     }
 
@@ -76,15 +76,15 @@ describe('Spread syntax에 대해 학습합니다.', function () {
     const argumentsObj = getAllParamsByArgumentsObj('first', 'second', 'third');
 
     expect(restParams).to.deep.equal(['first', 'second', 'third']);
-    expect(Object.keys(argumentsObj)).to.deep.equal([0,1,2]);
+    expect(Object.keys(argumentsObj)).to.deep.equal(['0','1','2']);
     expect(Object.values(argumentsObj)).to.deep.equal(['first', 'second', 'third']);
 
     // arguments와 rest parameter를 통해 배열로 된 전달인자(args)의 차이를 확인하시기 바랍니다.
     expect(restParams === argumentsObj).to.deep.equal(false);
-    expect(typeof restParams).to.deep.equal(Object);
-    expect(typeof argumentsObj).to.deep.equal(Object);
+    expect(typeof restParams).to.deep.equal('object');
+    expect(typeof argumentsObj).to.deep.equal('object');
     expect(Array.isArray(restParams)).to.deep.equal(true);
-    expect(Array.isArray(argumentsObj)).to.deep.equal(true);
+    expect(Array.isArray(argumentsObj)).to.deep.equal(false);
 
     const argsArr = Array.from(argumentsObj);
     expect(Array.isArray(argsArr)).to.deep.equal(true);
@@ -100,8 +100,8 @@ describe('Spread syntax에 대해 학습합니다.', function () {
       }
       return sum;
     }
-    expect(sum(1, 2, 3)).to.equal(FILL_ME_IN);
-    expect(sum(1, 2, 3, 4)).to.equal(FILL_ME_IN);
+    expect(sum(1, 2, 3)).to.equal(6);
+    expect(sum(1, 2, 3, 4)).to.equal(10);
   });
 
   it('Rest Parameter는 전달인자의 일부에만 적용할 수도 있습니다.', function () {
@@ -109,14 +109,14 @@ describe('Spread syntax에 대해 학습합니다.', function () {
     function getAllParams(required1, required2, ...args) {
       return [required1, required2, args];
     }
-    expect(getAllParams(123)).to.deep.equal(FILL_ME_IN);
+    expect(getAllParams(123)).to.deep.equal([123,undefined,Array(0)]);
 
     function makePizza(dough, name, ...toppings) {
       const order = `You ordered ${name} pizza with ${dough} dough and ${toppings.length} extra toppings!`;
       return order;
     }
-    expect(makePizza('original')).to.equal(FILL_ME_IN);
-    expect(makePizza('thin', 'pepperoni')).to.equal(FILL_ME_IN);
-    expect(makePizza('napoli', 'meat', 'extra cheese', 'onion', 'bacon')).to.equal(FILL_ME_IN);
+    expect(makePizza('original')).to.equal('You ordered undefined pizza with original dough and 0 extra toppings!');
+    expect(makePizza('thin', 'pepperoni')).to.equal('You ordered pepperoni pizza with thin dough and 0 extra toppings!');
+    expect(makePizza('napoli', 'meat', 'extra cheese', 'onion', 'bacon')).to.equal('You ordered meat pizza with napoli dough and 3 extra toppings!');
   });
 });
