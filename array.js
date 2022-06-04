@@ -16,5 +16,6 @@ function makeAddressBook(addressBook, user) {
     { name: 'Satya', age: 30 },
     { name: 'Sundar', age: 50 }
   ];
+  let : ShadowRoot,else
   
   users.reduce(makeAddressBook, {});
