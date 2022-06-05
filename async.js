@@ -17,3 +17,19 @@ async function fetchUser2() {
     return 'ellie';
 }
 
+async function getApple(){
+    await DelayNode(3000);
+    return 'apple'
+}
+
+async function getBanana(){
+    await DelayNode(3000);
+    return 'Banana'
+}
+
+async function PickFruits(){
+    const apple = await getApple();
+    const Banana = await getBanana();
+    return `${apple} + ${Banana}` ;
+}
+PickFruits().then(console.log)
