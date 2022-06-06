@@ -33,3 +33,4 @@ async function PickFruits(){
     return `${apple} + ${Banana}` ;
 }
 PickFruits().then(console.log)
+//trty
