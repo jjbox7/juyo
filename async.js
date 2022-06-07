@@ -33,3 +33,9 @@ async function PickFruits(){
     return `${apple} + ${Banana}` ;
 }
 PickFruits().then(console.log)
+
+
+// hoisting : var function declaration
+setTimeout(() => {
+    console.log('2');
+}, 2000);
