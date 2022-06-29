@@ -140,3 +140,21 @@ function calculate(n1, operator, n2) {
   }
   return String(result);
 }
+
+//calcuraor
+function calculate(n1, operator, n2) {
+  let result = 0;
+  if(operator === '+') {
+    result = Number(n1) + Number(n2); // '+'버튼을 눌렀을 때
+  }
+  else if(operator === '-') {
+     result = Number(n1) - Number(n2); // '-'버튼을 눌렀을 때
+  }
+  else if(operator === '*') {
+     result = Number(n1) * Number(n2); // '*'버튼을 눌렀을 때
+  }
+  if(operator === '/') {
+     result = Number(n1) / Number(n2); // '/'버튼을 눌렀을 때
+  }
+  return String(result);
+}
