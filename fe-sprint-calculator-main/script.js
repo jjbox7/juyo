@@ -197,5 +197,3 @@ if (target.matches('button')) {
   display.textContent = calculate(firstNum,operatorForAdvanced,previousNum)
   previousKey = 'calculate';
 }
-
-});
