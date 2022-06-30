@@ -158,3 +158,44 @@ function calculate(n1, operator, n2) {
   }
   return String(result);
 }
+
+
+const target = event.target; // 클릭된 HTML 엘리먼트의 정보가 저장되어 있습니다.
+const action = target.classList[0]; // 클릭된 HTML 엘리먼트에 클레스 정보를 가져옵니다.
+const buttonContent = target.textContent; // 클릭된 HTML 엘리먼트의 텍스트 정보를 가져옵니다.
+// ! 위 코드는 수정하지 마세요.
+
+// ! 여기서부터 Advanced Challenge & Nightmare 과제룰 풀어주세요.
+if (target.matches('button')) {
+  if (action === 'number') {
+      if (display.textContent === '0' || previousKey ==='operator'){
+          display.textContent = buttonContent;
+      } else {
+      display.textContent = display.textContent + buttonContent; 
+      }
+      previousKey = 'Number'
+  }
+  if (action === 'operator') {
+      //보이징 않지만, 저장이 되어 있어야 한다 -> 변수에 할당
+      operatorForAdvanced = buttonContent;
+      //현재 화면에 있는 숫자 저장-> 변수에 할당
+      firstNum = display.textContent;
+      //방금 뭐 눌렀는지도 저장을 해주자.
+      previousKey = 'operator';
+  }
+  if (action === 'decimal') {}
+  if (action === 'clear') {
+      display.textContent = '0';
+      firstNum = undefined;
+      operatorForAdvanced = undefined;
+      previousNum = undefined;
+      previousKey = 'clear';
+  }
+  if (action === 'calculate') {
+      previousNum = display.textContent;
+  }
+  display.textContent = calculate(firstNum,operatorForAdvanced,previousNum)
+  previousKey = 'calculate';
+}
+
+});
