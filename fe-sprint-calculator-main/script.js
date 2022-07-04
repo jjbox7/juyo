@@ -197,3 +197,17 @@ if (target.matches('button')) {
   display.textContent = calculate(firstNum,operatorForAdvanced,previousNum)
   previousKey = 'calculate';
 }
+if (action === 'decimal') {}
+if (action === 'clear') {
+    display.textContent = '0';
+    firstNum = undefined;
+    operatorForAdvanced = undefined;
+    previousNum = undefined;
+    previousKey = 'clear';
+}
+if (action === 'calculate') {
+    previousNum = display.textContent;
+}
+display.textContent = calculate(firstNum,operatorForAdvanced,previousNum)
+previousKey = 'calculate';
+
