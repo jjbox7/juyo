@@ -394,3 +394,28 @@ const jobAllocation = function (jobs, workersNum) {
 };
 
   
+const aux = (workerIdx, jobIdx, jobs, left) => {
+  // 이미 계산한 적이 있는 경우, 다시 풀지 않는다
+  // 마지막 작업자의 작업량을 전부 계산했으므로, 탈출 조건을 굳이 작성하지 않아도 된다.
+  if (memo[workerIdx][jobIdx] !== -1) return memo[workerIdx][jobIdx];
+
+  let workload = 0;
+  let min = Number.MAX_SAFE_INTEGER;
+  for (let i = jobIdx; i < jobs.length - left; i++) {
+    workload = workload + jobs[i];
+    // 가장 많이 일하는 사람의 작업량을 구한다.
+    const hardest = Math.max(
+      workload,
+      aux(workerIdx + 1, i + 1, jobs, left - 1)
+    );
+    // 그 작업량이 최소화되는 분배에서 최대 작업량을 구한다.
+    min = Math.min(min, hardest);
+  }
+  memo[workerIdx][jobIdx] = min;
+  return min;
+};
+
+return aux(0, 0, jobs, workersNum - 1);
+};
+
+
