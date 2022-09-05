@@ -494,3 +494,83 @@ function isGreaterThan(num1, num2) {
     return false
   }
 }
+class Queue {
+  //가장 앞에 있는 요소를 front,
+  //가장 뒤에 있는 요소를 rear 라고 했을 때
+  //queue constructor 생성
+  constructor() {
+    this.storage = {};
+    this.front = 0;
+    this.rear = 0;
+  }
+  // queue의 사이즈를 구합니다.
+  // queue는 추가될 때, rear의 값이 커지고 삭제 될 때, front가 변경이 때문에, 각 값을 알아야 size를 구할 수 있습니다.
+  size() {
+    return this.rear - this.front;
+  }
+  // queue에 element를 추가합니다.
+  // 새롭게 추가될 요소의 인덱스를 나타내는 this.rear를 키로, 요소를 값으로 하여 storage에 할당합니다. this.rear은 다음 인덱스를 가리키게 하여 새로운 요소에 대비합니다.
+  enqueue(element) {
+    this.storage[this.rear] = element;
+    this.rear += 1;
+  }
+  // queue에서 element를 제거 한 뒤 해당 element를 반환합니다.
+  // 만약 size가 0이라면 아무 일도 일어나지 않습니다.
+  // this.front+1로 가장 앞에 있는 요소를 다시 설정한 후 변수에 저장하고, 큐에서 삭제합니다.
+  dequeue() {
+    if (this.size() === 0) {
+      return;
+    }
+    const result = this.storage[this.front];
+    delete this.storage[this.front];
+    this.front += 1;
+    return result;
+  }
+}function browserStack(actions, start) {
+  // start 인자가 string이 아닌 것들은 전부 false로 리턴합니다.
+  if(typeof start !== 'string') return false;
+
+  // 뒤로 가기와 앞으로 가기 스택의 변수를 설정합니다
+  let prevStack = [];
+  let nextStack = [];
+  let current = start;
+  
+  // actions 배열을 전부 탐색하기 위해 반복문을 설정합니다.
+  for(let i = 0; i < actions.length; i++) {
+    // 만약 actions 배열의 요소가 -1이고(뒤로가기를 눌렀고), prevStack의 길이가 0이 아닐 때(이전으로 돌아가는 페이지가 있다면)
+    if(actions[i] === -1 && prevStack.length !== 0) {
+
+      // prevStack에서 pop한 요소를 prevPage로 할당합니다.
+      // nextStack에 current를 삽입합니다.
+      // current를 prevPage에 할당합니다.
+      let prevPage = prevStack.pop();
+      nextStack.push(current);
+      current = prevPage;
+
+      // 만약 actions 배열의 요소가 1이고(앞으로가기를 눌렀고), nextStack의 길이가 0이 아닐 때(다음으로 넘어가는 페이지가 있다면)
+    } else if(actions[i] === 1 && nextStack.length !== 0) {
+
+      // nextStack에서 pop한 요소를 nextPage로 할당합니다.
+      // prevStack에 current를 삽입합니다.
+      // current를 nextPage에 할당합니다.
+      let nextPage = nextStack.pop();
+      prevStack.push(current);
+      current = nextPage;
+
+      // 만약 actions 배열의 요소가 알파벳이라면 (새로운 페이지라면)
+    } else if(typeof actions[i] === 'string') {
+      
+      // prevStack에 current를 삽입합니다.
+      // current에 현재 알파벳 요소를 할당합니다.
+      // 새로운 페이지는 앞으로 갈 수 없기 때문에 nextStack을 비웁니다.
+      prevStack.push(current);
+      current = actions[i];
+      nextStack = [];
+    }
+
+    // 이외엔, 동작하지 않습니다.
+  }
+  
+  // 배열에 prevStack, current, nextStack을 순서대로 담아 반환합니다.
+  return [prevStack, current, nextStack];
+}
